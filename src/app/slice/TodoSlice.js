@@ -43,7 +43,7 @@ export const todoSlice = createSlice({
     deleteAllTodo: (state, action) => {
       if (action.payload === "all") {
         localStorage.setItem("todoList", JSON.stringify([]));
-        toast.success('ALL Tasks deleted successfully')
+        toast.success('ALL Tasks Deleted Successfully')
         return [];
       } else if (
         action.payload === "incomplete" ||
@@ -51,7 +51,7 @@ export const todoSlice = createSlice({
       ) {
         state = state.filter((todo) => todo.status !== action.payload);
         window.localStorage.setItem("todoList", JSON.stringify(state));
-        toast.success(`Tasks deleted successfully`)
+        toast.success(`Tasks Deleted Successfully`)
         return state;
       }
     },
